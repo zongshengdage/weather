@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>乡镇短临降水预报</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f2f4f8;
+            font-family: "Microsoft YaHei", SimHei, Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 34px;
+            margin-bottom: 10px;
+            color: #1f2d3d;
+        }
+
+        .tip {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 98%;
+            height: auto;
+            border: 1px solid #ccc;
+            background: white;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+    <h1>乡镇短临降水预报</h1>
+    <div class="tip">页面每60秒自动刷新</div>
+
+    <img id="forecastImg" src="乡镇短临降水预报.png" alt="乡镇短临降水预报">
+
+    <script>
+        function refreshImage() {
+            const img = document.getElementById("forecastImg");
+            img.src = "乡镇短临降水预报.png?t=" + new Date().getTime();
+        }
+
+        refreshImage();
+        setInterval(refreshImage, 60000);
+    </script>
+</body>
+</html>
